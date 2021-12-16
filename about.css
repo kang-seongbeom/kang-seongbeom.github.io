@@ -1,0 +1,441 @@
+:root {
+    --color1: #CCCCFFaa;
+    --color2: #6495EDaa;
+    --color3: #40E0D0aa;
+    --color4: #9FE2BFaa;
+    --color5: #DE3163aa;
+    --color6: #FF7F50aa;
+    --color7: #FFBF00aa;
+    --color8: #000000;
+    --color9: #ffffff;
+    --color10: #55555555;
+    --color11: #cccccc;
+    --color12: #ccccccbb;
+    --color13: #d3d3d388;
+    --color14: #80008066;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    -ms-overflow-style: none;
+    overflow: hidden;
+    background-color: var(--color13);
+    display: flex; /*wrap 중앙정렬*/
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#typing {
+    color: var(--color8);
+    font-size: 20px;
+    min-width: 11px;
+    white-space: nowrap;
+    position: fixed;
+    color: transparent;
+}
+
+#typing::before {
+    content: "Backend Developer 강성범의 포트폴리오";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    color: var(--color8);
+    overflow: hidden;
+    border-right: 1px solid black;
+    animation: keyboard-typing 5s steps(31) infinite;
+}
+
+#develop a {
+    color: var(--color14);
+}
+
+@keyframes keyboard-typing {
+    0% {
+        width: 0%;
+    }
+    50% {
+        width: 100%;
+    }
+    100% {
+        width: 0%;
+    }
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+#wrap {
+    width: 99%;
+    height: 100%;
+    overflow: hidden;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#nav {
+    background-color: var(--color10);
+    width: 20%;
+    height: 0;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    animation: nav-slide-UtD 1.0s linear forwards;
+}
+
+.nav-list {
+    overflow: scroll;
+}
+
+.nav-list::-webkit-scrollbar {
+    display: none;
+}
+
+@keyframes nav-slide-UtD {
+    from {
+        height: 0;
+    }
+    to {
+        height: 99%;
+    }
+}
+
+#nav-box {
+    height: 99%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    perspective: 500px;
+    overflow: scroll;
+    margin-bottom: 15px;
+}
+
+#nav-box::-webkit-scrollbar {
+    display: none;
+}
+
+
+.cube{
+    width: 150px;
+    height: 150px;
+    margin: 20px 0 20px 0;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+}
+
+.cube:hover{
+    animation: ani 10s linear infinite;
+}
+
+li{
+    font-family: "돋움", "굴림";
+    font-size: 1.2em;
+    font-weight: bold;
+    color: var(--color14);
+}
+
+@keyframes ani {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(1turn);
+    }
+}
+
+.cube div {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 3em;
+    font-weight: 800;
+    letter-spacing: .2em;
+}
+
+.left {
+    transform: rotateY(-90deg) translateZ(75px);
+    background-color: var(--color4);
+}
+
+.right {
+    transform: rotateY(90deg) translateZ(75px);
+    background-color: var(--color5);
+}
+
+.front {
+    transform: translateZ(75px);
+    background-color: var(--color6);
+}
+
+.back {
+    transform: rotateY(0.5turn) translateZ(75px);
+    background-color: var(--color7);
+}
+
+#content {
+    width: 0;
+    height: 99%;
+    background-color: var(--color10);
+    border-radius: 10px;
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    align-items: start;
+    animation: content-slide-LtR 1.0s linear forwards;
+    animation-delay: 1.0s;
+    overflow: scroll;
+}
+
+#content::-webkit-scrollbar {
+    display: none;
+}
+
+
+#content div{
+    width: 100%;
+    margin: 20px 0 20px 0;
+}
+
+#about-me, #skill, #contact-me{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+hr{
+    width: 100%;
+}
+h1{
+    color: var(--color4);
+}
+h3{
+    color: var(--color2);
+}
+h4{
+    color: var(--color1);
+}
+pre{
+    color: var(--color9);
+    font-size: 1.2em;
+}
+
+@keyframes content-slide-LtR {
+    from {
+        width: 0;
+    }
+    to {
+        width: 79%;
+    }
+}
+
+#profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 18px;
+}
+
+#picture {
+    width: 120px;
+    height: 120px;
+    border-radius: 30%;
+    margin: 8px;
+    position: relative;
+}
+
+#me {
+    width: 120px;
+    height: 120px;
+    border-radius: 30%;
+    position: relative;
+}
+
+#me-2 {
+    width: 120px;
+    height: 120px;
+    border-radius: 30%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+#picture:hover #me-2 {
+    display: block;
+}
+
+#picture:hover {
+    animation: hit 1s infinite;
+}
+
+@keyframes hit {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.8);
+    }
+}
+
+svg path {
+    stroke: var(--color9);
+    animation: title 2.5s linear forwards;
+}
+
+@keyframes title {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+#profile path:nth-child(1) {
+    stroke-dasharray: 153px;
+    stroke-dashoffset: 153px;
+    animation-delay: 2.3s;
+}
+
+#profile path:nth-child(2) {
+    stroke-dasharray: 151px;
+    stroke-dashoffset: 151px;
+    animation-delay: 2.6s;
+}
+
+#profile path:nth-child(3) {
+    stroke-dasharray: 180px;
+    stroke-dashoffset: 180px;
+    animation-delay: 2.9s;
+}
+
+ul {
+    list-style: none;
+}
+
+#frame {
+    width: 100%;
+    height: 100%;
+    background-color: var(--color10);
+    border-radius: 10px;
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    align-items: start;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+img {
+    height: 100%;
+}
+
+#github {
+    width: 25px;
+    height: 25px;
+    display: block;
+    margin: 0 auto;
+}
+
+#github:hover {
+    animation: hit 1.0s infinite;
+}
+
+@keyframes hit {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.8);
+    }
+}
+
+@media screen and (max-width: 640px) {
+    #wrap {
+        flex-direction: column;
+    }
+
+    #nav hr{
+        width: 1px;
+    }
+    #nav-box {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .nav-list {
+        margin-top: 5px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    #nav {
+        width: 0;
+        min-height: 200px;
+        flex-direction: row;
+        animation: nav-slide-LtR 1.0s linear forwards;
+    }
+
+    li{
+        font-size: 1.0em;
+    }
+
+    @keyframes nav-slide-LtR {
+        from {
+            width: 0;
+        }
+        to {
+            width: 99%;
+        }
+    }
+
+    #content {
+        width: 99%;
+        height: 0;
+        animation: content-slide-UtD 1.0s linear forwards;
+        animation-delay: 1.0s;
+    }
+
+    @keyframes content-slide-UtD {
+        from {
+            height: 0;
+        }
+        to {
+            height: 99%;
+        }
+    }
+}
