@@ -27,7 +27,7 @@ body {
     -ms-overflow-style: none;
     overflow: hidden;
     background-color: var(--color13);
-    display: flex; /*wrap 중앙정렬*/
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -41,40 +41,8 @@ footer {
     align-items: center;
 }
 
-#typing {
-    color: var(--color8);
-    font-size: 20px;
-    min-width: 11px;
-    white-space: nowrap;
-    position: fixed;
-    color: transparent;
-}
-
-#typing::before {
-    content: "Backend Developer 강성범의 포트폴리오";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    color: var(--color8);
-    overflow: hidden;
-    border-right: 1px solid black;
-    animation: keyboard-typing 5s steps(31) infinite;
-}
-
 #develop a {
     color: var(--color14);
-}
-
-@keyframes keyboard-typing {
-    0% {
-        width: 0%;
-    }
-    50% {
-        width: 100%;
-    }
-    100% {
-        width: 0%;
-    }
 }
 
 body::-webkit-scrollbar {
@@ -133,8 +101,7 @@ body::-webkit-scrollbar {
     display: none;
 }
 
-
-.cube{
+.cube {
     width: 150px;
     height: 150px;
     margin: 20px 0 20px 0;
@@ -145,11 +112,11 @@ body::-webkit-scrollbar {
     transform-style: preserve-3d;
 }
 
-.cube:hover{
+.cube:hover {
     animation: ani 10s linear infinite;
 }
 
-li{
+li {
     font-family: "돋움", "굴림";
     font-size: 1.2em;
     font-weight: bold;
@@ -218,31 +185,36 @@ li{
 }
 
 
-#content div{
+#content div {
     width: 100%;
     margin: 20px 0 20px 0;
 }
 
-#about-me, #skill, #contact-me{
+#about-me, #skill, #contact-me {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-hr{
+hr {
     width: 100%;
 }
-h1{
+
+h1 {
     color: var(--color4);
 }
-h3{
+
+h3 {
     color: var(--color2);
 }
-h4{
+
+h4 {
     color: var(--color1);
 }
-pre{
+
+pre {
+    font-family: "돋움", "굴림";
     color: var(--color9);
     font-size: 1.2em;
 }
@@ -275,18 +247,18 @@ pre{
 #me {
     width: 120px;
     height: 120px;
-    border-radius: 30%;
     position: relative;
+    border-radius: 30%;
 }
 
 #me-2 {
     width: 120px;
     height: 120px;
-    border-radius: 30%;
     position: absolute;
     top: 0;
     left: 0;
     display: none;
+    border-radius: 30%;
 }
 
 #picture:hover #me-2 {
@@ -339,18 +311,6 @@ ul {
     list-style: none;
 }
 
-#frame {
-    width: 100%;
-    height: 100%;
-    background-color: var(--color10);
-    border-radius: 10px;
-    display: flex;
-    justify-content: start;
-    flex-direction: column;
-    align-items: start;
-}
-
-
 a {
     text-decoration: none;
 }
@@ -363,20 +323,11 @@ img {
     width: 25px;
     height: 25px;
     display: block;
-    margin: 0 auto;
+    margin-top: 5px;
 }
 
 #github:hover {
     animation: hit 1.0s infinite;
-}
-
-@keyframes hit {
-    0%, 100% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(0.8);
-    }
 }
 
 @media screen and (max-width: 640px) {
@@ -384,9 +335,10 @@ img {
         flex-direction: column;
     }
 
-    #nav hr{
+    #nav hr {
         width: 1px;
     }
+
     #nav-box {
         width: 100%;
         height: 100%;
@@ -410,7 +362,7 @@ img {
         animation: nav-slide-LtR 1.0s linear forwards;
     }
 
-    li{
+    li {
         font-size: 1.0em;
     }
 
